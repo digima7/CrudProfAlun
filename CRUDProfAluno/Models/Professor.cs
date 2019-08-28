@@ -8,7 +8,8 @@ namespace CRUDProfAluno.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Nome { get; set; }        
-        public List<Aluno> alunos { get; set; }
+        public string Nome { get; set; }       
+        
+        public virtual ICollection<Aluno> Alunos { get; set; }
     }
 }

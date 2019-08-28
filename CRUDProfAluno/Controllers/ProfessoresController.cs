@@ -14,13 +14,13 @@ namespace CRUDProfAluno.Controllers
     {
         private Context db = new Context();
 
-        // GET: Professors
+        // GET: Professores
         public ActionResult Index()
         {
             return View(db.Professores.ToList());
         }
 
-        // GET: Professors/Details/5
+        // GET: Professores/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace CRUDProfAluno.Controllers
             return View(professor);
         }
 
-        // GET: Professors/Create
+        // GET: Professores/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Professors/Create
+        // POST: Professores/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace CRUDProfAluno.Controllers
             return View(professor);
         }
 
-        // GET: Professors/Edit/5
+        // GET: Professores/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace CRUDProfAluno.Controllers
             return View(professor);
         }
 
-        // POST: Professors/Edit/5
+        // POST: Professores/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace CRUDProfAluno.Controllers
             return View(professor);
         }
 
-        // GET: Professors/Delete/5
+        // GET: Professores/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace CRUDProfAluno.Controllers
             return View(professor);
         }
 
-        // POST: Professors/Delete/5
+        // POST: Professores/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

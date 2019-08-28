@@ -14,13 +14,14 @@ namespace CRUDProfAluno.Controllers
     {
         private Context db = new Context();
 
-        // GET: Alunoes
+        // GET: Alunos
         public ActionResult Index()
         {
-            return View(db.Alunos.ToList());
+            var alunos = db.Alunos.Include(a => a.Professor);
+            return View(alunos.ToList());
         }
 
-        // GET: Alunoes/Details/5
+        // GET: Alunos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,18 +36,19 @@ namespace CRUDProfAluno.Controllers
             return View(aluno);
         }
 
-        // GET: Alunoes/Create
+        // GET: Alunos/Create
         public ActionResult Create()
         {
+            ViewBag.ProfessorID = new SelectList(db.Professores, "Id", "Nome");
             return View();
         }
 
-        // POST: Alunoes/Create
+        // POST: Alunos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Nome,DataNascimento")] Aluno aluno)
+        public ActionResult Create([Bind(Include = "Id,Nome,DataNascimento,ProfessorID")] Aluno aluno)
         {
             if (ModelState.IsValid)
             {
@@ -55,10 +57,11 @@ namespace CRUDProfAluno.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.ProfessorID = new SelectList(db.Professores, "Id", "Nome", aluno.ProfessorID);
             return View(aluno);
         }
 
-        // GET: Alunoes/Edit/5
+        // GET: Alunos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -70,15 +73,16 @@ namespace CRUDProfAluno.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.ProfessorID = new SelectList(db.Professores, "Id", "Nome", aluno.ProfessorID);
             return View(aluno);
         }
 
-        // POST: Alunoes/Edit/5
+        // POST: Alunos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Nome,DataNascimento")] Aluno aluno)
+        public ActionResult Edit([Bind(Include = "Id,Nome,DataNascimento,ProfessorID")] Aluno aluno)
         {
             if (ModelState.IsValid)
             {
@@ -86,10 +90,11 @@ namespace CRUDProfAluno.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.ProfessorID = new SelectList(db.Professores, "Id", "Nome", aluno.ProfessorID);
             return View(aluno);
         }
 
-        // GET: Alunoes/Delete/5
+        // GET: Alunos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +109,7 @@ namespace CRUDProfAluno.Controllers
             return View(aluno);
         }
 
-        // POST: Alunoes/Delete/5
+        // POST: Alunos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
