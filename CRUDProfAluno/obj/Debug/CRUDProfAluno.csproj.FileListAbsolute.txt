@@ -76,8 +76,11 @@ C:\dev\CrudProfAlun\CRUDProfAluno\bin\pt-br\System.Web.Razor.resources.dll
 C:\dev\CrudProfAlun\CRUDProfAluno\bin\pt-br\System.Web.WebPages.resources.dll
 C:\dev\CrudProfAlun\CRUDProfAluno\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\dev\CrudProfAlun\CRUDProfAluno\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\dev\CrudProfAlun\CRUDProfAluno\obj\Debug\CRUDProfAluno.csprojAssemblyReference.cache
 C:\dev\CrudProfAlun\CRUDProfAluno\obj\Debug\CRUDProfAluno.csproj.CoreCompileInputs.cache
 C:\dev\CrudProfAlun\CRUDProfAluno\obj\Debug\CRUDProfAluno.csproj.CopyComplete
 C:\dev\CrudProfAlun\CRUDProfAluno\obj\Debug\CRUDProfAluno.dll
 C:\dev\CrudProfAlun\CRUDProfAluno\obj\Debug\CRUDProfAluno.pdb
+C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.dll
+C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.SqlServer.dll
+C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.xml
+C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.SqlServer.xml
