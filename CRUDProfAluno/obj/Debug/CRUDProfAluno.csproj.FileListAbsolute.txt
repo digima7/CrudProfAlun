@@ -84,3 +84,4 @@ C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.dll
 C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.SqlServer.dll
 C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.xml
 C:\dev\CrudProfAlun\CRUDProfAluno\bin\EntityFramework.SqlServer.xml
+C:\dev\CrudProfAlun\CRUDProfAluno\obj\Debug\CRUDProfAluno.csprojAssemblyReference.cache
