@@ -11,6 +11,7 @@ namespace CRUDProfAluno.Models
         public int ProfessorID { get; set; }
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        [DataType(DataType.Date)]
         public DateTime DataNascimento { get; set; }
 
         public virtual Professor Professor { get; set; }
