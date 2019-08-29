@@ -20,6 +20,13 @@ namespace CRUDProfAluno.Controllers
             return View(db.Professores.ToList());
         }
 
+        // GET: Professores
+        public ActionResult MediaIdadeAlunos15a17()
+        {
+            return View(db.Professores.ToList());
+        }
+        
+
         // GET: Professores/Details/5
         public ActionResult Details(int? id)
         {

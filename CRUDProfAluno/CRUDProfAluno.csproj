@@ -184,6 +184,8 @@
     <Content Include="Views\Alunos\Details.cshtml" />
     <Content Include="Views\Alunos\Edit.cshtml" />
     <Content Include="Views\Alunos\Index.cshtml" />
+    <Content Include="Views\Alunos\Maiores16Anos.cshtml" />
+    <Content Include="Views\Professores\MediaIdadeAlunos15a17.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

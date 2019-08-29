@@ -16,16 +16,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nome do aplicativo", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </button>              
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Professores", "index", "Professores")</li>
                     <li>@Html.ActionLink("Alunos", "index", "Alunos")</li>
+                    <li>@Html.ActionLink("Alunos maiores de 16 anos", "Maiores16Anos", "Alunos")</li>
+                    <li>@Html.ActionLink("Professores cuja a media de idade dos alunos é de 15 a 17 anos", "MediaIdadeAlunos15a17", "Professores")</li>
                 </ul>
             </div>
         </div>

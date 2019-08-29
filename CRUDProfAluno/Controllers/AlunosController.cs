@@ -120,6 +120,14 @@ namespace CRUDProfAluno.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Alunos
+        public ActionResult Maiores16Anos()
+        {
+            var alunos = db.Alunos.Include(a => a.Professor);
+            return View(alunos.ToList());
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -128,5 +136,7 @@ namespace CRUDProfAluno.Controllers
             }
             base.Dispose(disposing);
         }
+
+
     }
 }

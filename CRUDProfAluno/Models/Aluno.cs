@@ -12,5 +12,17 @@ namespace CRUDProfAluno.Models
         public int ProfessorID { get; set; }
 
         public virtual Professor Professor { get; set; }
+
+        public int getIdade()
+        {
+            int idade = DateTime.Now.Year - DataNascimento.Year;
+
+            if ((DateTime.Now.Month < DataNascimento.Month) || (DateTime.Now.Month == DataNascimento.Month && DateTime.Now.Day < DataNascimento.Day ))
+            {
+                idade--;
+            }
+
+            return idade;
+        }
     }
 }
