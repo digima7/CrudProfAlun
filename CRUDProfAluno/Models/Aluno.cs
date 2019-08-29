@@ -8,8 +8,10 @@ namespace CRUDProfAluno.Models
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
-        public DateTime DataNascimento { get; set; }
         public int ProfessorID { get; set; }
+
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DataNascimento { get; set; }
 
         public virtual Professor Professor { get; set; }
 
@@ -17,12 +19,15 @@ namespace CRUDProfAluno.Models
         {
             int idade = DateTime.Now.Year - DataNascimento.Year;
 
-            if ((DateTime.Now.Month < DataNascimento.Month) || (DateTime.Now.Month == DataNascimento.Month && DateTime.Now.Day < DataNascimento.Day ))
+            if ((DateTime.Now.Month < DataNascimento.Month) || (DateTime.Now.Month == DataNascimento.Month && DateTime.Now.Day < DataNascimento.Day))
             {
                 idade--;
             }
 
             return idade;
         }
+
+
+
     }
 }

@@ -12,10 +12,10 @@ namespace CRUDProfAluno.Models
         
         public virtual ICollection<Aluno> Alunos { get; set; }
 
-        public int mediaIdadeAlunos()
+        public double mediaIdadeAlunos()
         {
-            int somaIdades = Alunos.Sum(x => x.getIdade());
-            int media = somaIdades / Alunos.Count;
+            double somaIdades = Alunos.Sum(x => x.getIdade());
+            double media = somaIdades / Alunos.Count;
             return media;
         }
     }
